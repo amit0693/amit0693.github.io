@@ -2,19 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',  // Enable static exports
-  basePath: '',
-  assetPrefix: './',  // Add this line for GitHub Pages
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cdn.simpleicons.org',
-      },
-    ],
     unoptimized: true, // Required for static export
   },
-  // Disable image optimization since it's not supported with static exports
-  // This is needed for GitHub Pages deployment
   trailingSlash: true,
 };
 
