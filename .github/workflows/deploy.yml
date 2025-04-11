@@ -27,7 +27,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          touch out/.nojekyll  # Create .nojekyll file to disable Jekyll processing
 
       - name: List directories
         run: |
@@ -39,3 +41,4 @@ jobs:
         with:
           folder: out
           branch: gh-pages
+          clean: true  # Automatically remove deleted files from the deploy branch

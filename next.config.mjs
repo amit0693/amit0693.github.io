@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',  // Enable static exports
   basePath: '',
+  assetPrefix: './',  // Add this line for GitHub Pages
   images: {
     remotePatterns: [
       {
